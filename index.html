@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">selva</title>
+    <script src="ambiente.js"></script>
+    <style>
+    
+    div#area {
+            font: normal 18pt Arial; 
+            background: green;
+            line-height: 200px;
+            width: 200px;
+            text-align: center;
+            color: white;
+      }
+
+      img {
+          
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #dfdfdf;
+      }
+
+
+      
+    
+    </style>
+
+
+     <img src="29_07_23_VOLTA/imagens/img.png"/><br>
+     <input type="file"/> <br><br>
+    
+    
+
+    <input type="text" name="texto" id="txt" placeholder="digite novo título" >
+    <input type="button" value="MUDE" id="sel" onclick= mudaNome()><br>
+    
+
+  <br>  <input type="number" name="number" id="txtn1"> + 
+        <input type="number" name="number"  id="txtn2"> 
+        <input type="button" value="CALCULAR" onclick=calcular()>
+        <h3 id="res">resposta aparecerá aqui:</h3>
+        <select name="pais" id="txtpais" required="pais" placeholder="Escolha um país"> 
+         
+         
+          <option value="opcao1">BRASIL</option>
+          <option value="opcao2">ARGENTINA</option>
+          <option value="opcao3">ESTADOS UNIDOS</option>
+          <option value="opcao4">MÉXICO</option>
+
+
+        </select>
+        <input type="hidden" name="PAISES" ><br><br>
+         
+        <h4>VOCÊ JOGA MAL?</h4>
+        <input type="button" value="SIM" id="si" onclick= resposta()>
+        <input type="button" value="NÃO" id="no">
+
+        <p id="jogamal"></p>
+        
+        
+
+        
+</head>
+<body>
+
+<script>
+
+const image = document.querySelector("img"),
+     input = document.querySelector("input");   
+
+     input.addEventListener("change", () => {
+      image.src = URL.createObjectURL(input.files[0]);
+     });
+
+  let button = window.document.getElementById("no");
+  let heigth = window.innerHeight - 50;
+  let width = window.innerWidth - 50;
+  
+     button.addEventListener('mouseover', function(){
+         
+        button.style.position = "absolute";
+        button.style.top = Math.random() * heigth + "px";
+        button.style.left = Math.random() * width + "px";
+  
+     })
+     
+     </script>
+    
+    
+
+    <div id="area">Área</div>
+    <script src="ambiente.js"></script>
+</body>
+</html>
